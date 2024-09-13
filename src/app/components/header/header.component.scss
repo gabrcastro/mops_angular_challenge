@@ -1,0 +1,85 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: var(--black);
+
+  .logo {
+    height: 50%;
+    display: flex;
+  }
+
+  .right_actions {
+    display: flex;
+    align-items: center;
+
+    a:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+
+    .button_home {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      text-decoration: none;
+      gap: 4px;
+      padding: 10px;
+      border: 1.5px solid var(--gray);
+      border-radius: 15px 0px 0px 15px;
+      background-color: var(--white);
+      color: var(--black);
+      font-size: 0.9rem;
+      font-weight: 600;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .button_favorites {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+      padding: 10px;
+      border: 1.5px solid var(--gray);
+      border-radius: 0px 15px 15px 0px;
+      background-color: transparent;
+      color: var(--gray);
+      font-size: 0.9rem;
+      font-weight: 600;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .favoties_count {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px;
+      background-color: var(--white);
+      border-radius: 100px;
+      color: var(--black);
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
