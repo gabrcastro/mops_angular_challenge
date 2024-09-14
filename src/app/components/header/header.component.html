@@ -3,14 +3,22 @@
   <img [src]="logoPath" [alt]="logoAlt" />
 
   <div class="right_actions">
-    <a class="button_home" href="/home">
-      <span class="material-icons">home</span>
-      <i class="fa-solid fa-house"></i>
+    <a
+      [ngClass]="currentRoute == '/home' ? 'home_selected' : 'home_unselected'"
+      href="/home"
+    >
+      <mat-icon class="icon">home</mat-icon>
       Início
     </a>
-    <a class="button_favorites" href="/favorites">
-      <span class="material-icons">favorite</span>
-      <i class="fa-solid fa-house"></i>
+    <a
+      [ngClass]="
+        currentRoute == '/favorites'
+          ? 'favorite_selected'
+          : 'favorite_unselected'
+      "
+      href="/favorites"
+    >
+      <mat-icon class="icon">favorite</mat-icon>
       Favoritos
       <div class="favoties_count">3</div>
     </a>

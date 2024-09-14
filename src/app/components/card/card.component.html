@@ -1,0 +1,16 @@
+<div class="card">
+  @if (favorite == true) {
+  <div class="favorite">
+    <mat-icon class="icon">favorite</mat-icon>
+  </div>
+  } @if (favorite == false) {
+  <div class="no-favorite">
+    <mat-icon class="icon">favorite_outlined</mat-icon>
+  </div>
+  }
+  <div class="image"></div>
+  <div class="info">
+    <p class="name">{{ name }}</p>
+    <p class="type">{{ type }}</p>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<main>
+  <div class="favorite_header">
+    <img [src]="favoritesPath" [alt]="favoritesAlt" />
+  </div>
+
+  @if (items.length <= 0) {
+  <div class="favorite_content">
+    <h3>Parece que você ainda não tem favoritos</h3>
+    <p>Volte à página inicial e escolha os melhores para você.</p>
+    <a href="/home">Voltar ao início</a>
+  </div>
+  } @if (items.length > 0) {
+  <div class="favorite_cards">
+    @for (item of items; track item) {
+    <app-card
+      [image]="item.image ?? 'assets/images/no-image.png'"
+      [name]="item.name"
+      [type]="item.type"
+    ></app-card>
+    }
+  </div>
+  }
+</main>

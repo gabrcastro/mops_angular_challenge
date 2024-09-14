@@ -1,0 +1,27 @@
+<main>
+  <div class="home_header">
+    <img [src]="homePath" [alt]="homeAlt" />
+
+    <mat-form-field appearance="outline" class="input">
+      <mat-label>Pesquisar</mat-label>
+      <input matInput />
+    </mat-form-field>
+  </div>
+
+  @if (items.length <= 0) {
+  <div class="home_content">
+    <h3>Nada foi encontrado</h3>
+    <p>Tente realizar uma nova busca.</p>
+  </div>
+  } @if (items.length > 0) {
+  <div class="favorite_cards">
+    @for (item of items; track item) {
+    <app-card
+      [image]="item.image ?? 'assets/images/no-image.png'"
+      [name]="item.name"
+      [type]="item.type"
+    ></app-card>
+    }
+  </div>
+  }
+</main>
