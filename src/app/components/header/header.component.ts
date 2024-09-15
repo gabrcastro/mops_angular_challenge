@@ -2,7 +2,7 @@ import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLinkActive } from '@angular/router';
-import { CounterService } from '../../state/counter.state';
+import { CounterService } from '../../services/counter.service';
 
 @Component({
   selector: 'app-header',

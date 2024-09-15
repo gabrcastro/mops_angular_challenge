@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { CharacterData } from '../../data/model/character.model';
-import { CounterService } from '../../state/counter.state';
+import { CounterService } from '../../services/counter.service';
 
 @Component({
   selector: 'app-favorites',

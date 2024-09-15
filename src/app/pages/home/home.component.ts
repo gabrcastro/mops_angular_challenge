@@ -5,7 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { CardComponent } from '../../components/card/card.component';
 import { CharacterService } from '../../services/character.service';
 import { CharacterData } from '../../data/model/character.model';
-import { CounterService } from '../../state/counter.state';
+import { CounterService } from '../../services/counter.service';
 import { SearchComponent } from '../../components/search/search.component';
 import { SearchService } from '../../services/search.service';
 

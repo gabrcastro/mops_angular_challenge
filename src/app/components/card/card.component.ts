@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { CounterService } from '../../state/counter.state';
+import { CounterService } from '../../services/counter.service';
 import { CharacterData } from '../../data/model/character.model';
 import { CharacterService } from '../../services/character.service';
 @Component({
