@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+// MATERIAL
+@use "@angular/material" as mat;
+@include mat.core();
+
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// PAGE
+:root {
+  --black: #0a0a0a;
+  --white: #fafafa;
+  --bg-dark: #1f1f1f;
+  --gray: #a4a4a4;
+  --dark: #424242;
+  --green: #00b5cc;
+  --lemon: #b2df28;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

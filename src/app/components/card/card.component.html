@@ -1,0 +1,19 @@
+<div class="card">
+  @if (character?.isFavorited) {
+  <div (click)="removeFavorite(character!.id)" class="favorite">
+    <mat-icon class="icon">favorite</mat-icon>
+  </div>
+  } @if (!character?.isFavorited) {
+  <div (click)="saveCharacter(character!)" class="no-favorite">
+    <mat-icon class="icon">favorite_outlined</mat-icon>
+  </div>
+  }
+  <div class="image">
+    <img [src]="character?.image" />
+  </div>
+  <div class="info">
+    <p class="name">{{ character?.name }}</p>
+    <ng-template #noName><p class="name">Nome não disponível</p></ng-template>
+    <p class="specie">{{ character?.species }}</p>
+  </div>
+</div>

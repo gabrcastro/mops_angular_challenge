@@ -1,0 +1,26 @@
+<header>
+  <!-- <img src="assets/images/logo.png" alt="Logo Rick and Morty" class="logo" /> -->
+  <img [src]="logoPath" [alt]="logoAlt" />
+
+  <div class="right_actions">
+    <a
+      [ngClass]="currentRoute == '/home' ? 'home_selected' : 'home_unselected'"
+      href="/home"
+    >
+      <mat-icon class="icon">home</mat-icon>
+      Início
+    </a>
+    <a
+      [ngClass]="
+        currentRoute == '/favorites'
+          ? 'favorite_selected'
+          : 'favorite_unselected'
+      "
+      href="/favorites"
+    >
+      <mat-icon class="icon">favorite</mat-icon>
+      Favoritos
+      <div class="favoties_count">{{ favoritesCounter }}</div>
+    </a>
+  </div>
+</header>
