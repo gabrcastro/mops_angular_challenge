@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { CharacterData } from '../../data/model/character.model';
-import { CounterService } from '../../state/counter.state';
+import { CounterService } from '../../services/counter.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-favorites',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, TranslateModule],
   templateUrl: './favorites.component.html',
   styleUrl: './favorites.component.scss',
 })

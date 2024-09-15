@@ -1,5 +1,12 @@
 .page {
+  padding-top: 100px;
   display: flex;
   width: 100vw;
   height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    padding-top: 180px;
+  }
 }

@@ -1,0 +1,15 @@
+{
+  "global": {
+    "home": "Início",
+    "favorites": "Favoritos",
+    "search": "Pesquisar",
+    "page": "Página",
+    "of": "de",
+    "pageNotFound": "Página não encontrada",
+    "goBackHome": "Voltar ao início",
+    "noFavorites": "Parece que você ainda não tem favoritos",
+    "noFavoritesSubtitle": "Volte à página inicial e escolha os melhores para você.",
+    "nothingFound": "Nada foi encontrado",
+    "nothingFoundSubtitle": "Tente realizar uma nova busca."
+  }
+}

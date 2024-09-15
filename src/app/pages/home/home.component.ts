@@ -5,9 +5,10 @@ import { MatInputModule } from '@angular/material/input';
 import { CardComponent } from '../../components/card/card.component';
 import { CharacterService } from '../../services/character.service';
 import { CharacterData } from '../../data/model/character.model';
-import { CounterService } from '../../state/counter.state';
+import { CounterService } from '../../services/counter.service';
 import { SearchComponent } from '../../components/search/search.component';
 import { SearchService } from '../../services/search.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ import { SearchService } from '../../services/search.service';
     MatInputModule,
     MatIconModule,
     SearchComponent,
+    TranslateModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -45,7 +47,9 @@ export class HomeComponent {
 
     this.searchService.searchResults.subscribe((results) => {
       if (results && results.results) {
-        this.filteredItems = results.results;
+        this.items = results.results;
+        this.filteredItems = this.items;
+        this.updateFavoritesFromSearch();
       } else {
         this.filteredItems = [];
       }
@@ -86,7 +90,17 @@ export class HomeComponent {
     });
   }
 
-  // Função para ir para a próxima página
+  updateFavoritesFromSearch() {
+    let favorites = JSON.parse(
+      localStorage.getItem('favorites_saved')!
+    ) as CharacterData[];
+
+    this.filteredItems.forEach((item) => {
+      const isFavorite = favorites.some((favorite) => favorite.id === item.id);
+      item.isFavorited = isFavorite;
+    });
+  }
+
   nextPage() {
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
@@ -94,7 +108,6 @@ export class HomeComponent {
     }
   }
 
-  // Função para ir para a página anterior
   previousPage() {
     if (this.currentPage > 1) {
       this.currentPage--;

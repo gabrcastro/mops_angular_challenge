@@ -6,6 +6,16 @@ main {
   width: 100vw;
   height: 100%;
 
+  .word {
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Creepster", sans-serif;
+    color: var(--green);
+    text-shadow: -1px -1px 5px var(--lemon), 1px -1px 5px var(--lemon),
+      -1px 1px 5px var(--lemon), 1px 1px 5px var(--lemon);
+  }
+
   .favorite_header {
     display: flex;
     align-items: center;
@@ -60,12 +70,27 @@ main {
   .favorite_cards {
     border-radius: 20px;
     padding: 20px;
-    width: 72%;
+    width: 70%;
+    margin-left: 40px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    gap: 10px;
+    justify-content: start;
+    gap: 40px;
+
+    app-card {
+      flex: 1 1 calc(33.33% - 40px); /* 3 cards per line, considering the gap */
+      max-width: calc(
+        33.33% - 40px
+      ); /* Ensure that they do not exceed 3 cards */
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .favorite_cards app-card {
+    flex: 1 1 calc(50% - 40px) !important;
+    max-width: calc(50% - 40px) !important;
   }
 }
 
@@ -93,6 +118,11 @@ main {
         font-size: 0.8rem;
         padding: 13px 27px;
       }
+    }
+
+    .favorite_cards app-card {
+      flex: 1 1 90% !important;
+      max-width: 90% !important;
     }
   }
 }
