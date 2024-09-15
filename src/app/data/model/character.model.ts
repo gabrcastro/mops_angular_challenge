@@ -1,8 +1,10 @@
 export interface CharacterResponse {
-  count: number;
-  next: string;
-  pages: number;
-  prev: null;
+  info: {
+    count: number;
+    next: string;
+    pages: number;
+    prev: null;
+  };
   results: CharacterData[];
 }
 

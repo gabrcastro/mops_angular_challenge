@@ -1,0 +1,17 @@
+input {
+  width: 100%;
+  padding: 15px 30px;
+  border: 1px solid var(--gray);
+  border-radius: 15px;
+  font-size: 1.3rem;
+  background: transparent;
+  color: var(--white);
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--gray);
+  }
+}
