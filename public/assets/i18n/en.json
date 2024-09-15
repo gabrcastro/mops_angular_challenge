@@ -1,0 +1,15 @@
+{
+  "global": {
+    "home": "Home",
+    "favorites": "Favorites",
+    "search": "Search",
+    "page": "Page",
+    "of": "of",
+    "pageNotFound": "Page not found",
+    "goBackHome": "Go back to Home",
+    "noFavorites": "Looks like you don't have favorites yet",
+    "noFavoritesSubtitle": "Go back to the home and choose the best for you.",
+    "nothingFound": "Nothing was found",
+    "nothingFoundSubtitle": "Try to perform a new search."
+  }
+}
