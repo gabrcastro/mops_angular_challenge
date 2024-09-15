@@ -12,11 +12,7 @@
   } @if (items.length > 0) {
   <div class="favorite_cards">
     @for (item of items; track item) {
-    <app-card
-      [image]="item.image ?? 'assets/images/no-image.png'"
-      [name]="item.name"
-      [type]="item.type"
-    ></app-card>
+    <app-card [character]="item"></app-card>
     }
   </div>
   }

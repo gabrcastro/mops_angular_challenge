@@ -1,16 +1,18 @@
 <div class="card">
-  @if (favorite == true) {
-  <div class="favorite">
+  @if (character?.isFavorited) {
+  <div (click)="removeFavorite(character!.id)" class="favorite">
     <mat-icon class="icon">favorite</mat-icon>
   </div>
-  } @if (favorite == false) {
-  <div class="no-favorite">
+  } @if (!character?.isFavorited) {
+  <div (click)="saveCharacter(character!)" class="no-favorite">
     <mat-icon class="icon">favorite_outlined</mat-icon>
   </div>
   }
-  <div class="image"></div>
+  <div class="image">
+    <img [src]="character?.image" />
+  </div>
   <div class="info">
-    <p class="name">{{ name }}</p>
-    <p class="type">{{ type }}</p>
+    <p class="name">{{ character?.name }}</p>
+    <p class="specie">{{ character?.species }}</p>
   </div>
 </div>

@@ -4,7 +4,7 @@
 
     <mat-form-field appearance="outline" class="input">
       <mat-label>Pesquisar</mat-label>
-      <input matInput />
+      <input matInput class="my-custom-input" />
     </mat-form-field>
   </div>
 
@@ -14,13 +14,9 @@
     <p>Tente realizar uma nova busca.</p>
   </div>
   } @if (items.length > 0) {
-  <div class="favorite_cards">
+  <div class="home_cards">
     @for (item of items; track item) {
-    <app-card
-      [image]="item.image ?? 'assets/images/no-image.png'"
-      [name]="item.name"
-      [type]="item.type"
-    ></app-card>
+    <app-card [character]="item"></app-card>
     }
   </div>
   }

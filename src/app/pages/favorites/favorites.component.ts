@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { CardComponent, Character } from '../../components/card/card.component';
+import { CardComponent } from '../../components/card/card.component';
+import { CharacterData } from '../../data/model/character.model';
+import { CounterService } from '../../state/counter.state';
 
 @Component({
   selector: 'app-favorites',
@@ -9,27 +11,17 @@ import { CardComponent, Character } from '../../components/card/card.component';
   styleUrl: './favorites.component.scss',
 })
 export class FavoritesComponent {
-  favoritesPath: string = 'assets/images/favorites.png';
-  favoritesAlt: string = 'Favoritos';
+  favoritesPath: string = '';
+  favoritesAlt: string = '';
+  items: Array<CharacterData> = [];
 
-  items: Array<Character> = [
-    {
-      image: null,
-      name: 'Rick Chanshez',
-      type: 'Human',
-      favorite: true,
-    },
-    {
-      image: null,
-      name: 'Rick Chanshez',
-      type: 'Human',
-      favorite: true,
-    },
-    {
-      image: null,
-      name: 'Rick Chanshez',
-      type: 'Human',
-      favorite: true,
-    },
-  ];
+  constructor(private counterService: CounterService) {}
+
+  ngOnInit() {
+    this.favoritesPath = 'assets/images/favorites.png';
+    this.favoritesAlt = 'Favoritos';
+    this.counterService.currentCount.subscribe((data) => {
+      this.items = data;
+    });
+  }
 }
