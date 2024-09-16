@@ -2,7 +2,9 @@
 
 Rick and Morty Challenge é uma plataforma para visualizar os personagens do famoso desenho e favoritar aqueles personagens que mais agradam.
 
-<center><img src="/" /></center>
+<center>
+  <img src="./public/doc/home.png" width="60%" />
+</center>
 
 ### Instalação
 
@@ -42,8 +44,8 @@ O link para acessar será exibido no próprio terminal onde foi executado o proj
 
 ### Links 
 
-[Rick and Morty API](https://rickandmortyapi.com/documentation/#introduction)
-[Angular](https://angular.dev/)
-[Rxjs](https://rxjs.dev/)
+[Rick and Morty API](https://rickandmortyapi.com/documentation/#introduction) <br>
+[Angular](https://angular.dev/) <br>
+[Rxjs](https://rxjs.dev/) <br>
 
 
