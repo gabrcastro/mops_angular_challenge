@@ -17,7 +17,7 @@ export class HeaderComponent {
   logoAlt: string = '';
   currentRoute: string = '';
   favoritesCounter?: number;
-  currentLang: string = 'en';
+  currentLang: string = '';
 
   constructor(
     private counterService: CounterService,
@@ -28,12 +28,21 @@ export class HeaderComponent {
     const lang = this.translateService.currentLang;
     this.currentLang = lang == undefined || lang == 'en' ? 'pt' : 'en';
     this.translateService.use(this.currentLang);
+    localStorage.setItem('lang', this.currentLang);
   }
 
   ngOnInit() {
+    this.currentLang =
+      localStorage.getItem('lang') != null
+        ? localStorage.getItem('lang')!
+        : 'en';
     this.logoPath = 'assets/images/logo.png';
     this.logoAlt = 'Rick and Morty';
     this.currentRoute = window.location.pathname;
+
+    if (localStorage.getItem('lang') != null) {
+      this.translateService.use(localStorage.getItem('lang')!);
+    }
 
     this.counterService.currentCount.subscribe(
       (counter) => (this.favoritesCounter = counter.length)
