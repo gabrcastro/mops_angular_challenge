@@ -1,27 +1,49 @@
-# MottuOpsChallenge
+# Rick and Morty Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+Rick and Morty Challenge é uma plataforma para visualizar os personagens do famoso desenho e favoritar aqueles personagens que mais agradam.
 
-## Development server
+<center><img src="/" /></center>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Instalação
 
-## Code scaffolding
+Para realizar a instalação e rodar o projeto localmente, siga os passos abaixo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Clone o projeto
 
-## Build
+Realize o clone deste repositório com o seguinte comando <br>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<code>git clone https://github.com/gabrcastro/mops_angular_challenge.git</code>
 
-## Running unit tests
+#### Instale as dependências
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Após o clone, entre no diretório do projeto e instale as dependências do projeto. Use o gerenciador de pacotes da sua preferência. 
+No meu caso, estou usando o PNPM. <br>
 
-## Running end-to-end tests
+<code>pnpm i</code>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### Execute o projeto
 
-## Further help
+Feito isso, execute o projeto com o seguinte comando <br><br>
+<code>pnpm start</code>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+#### Acesse
+
+Com isso, pode acessar no seguinte link: localhost:4200 <br><br>
+O link para acessar será exibido no próprio terminal onde foi executado o projeto.
+
+
+### Funcionalidades
+
+ - Listar todos os personagens
+ - Pesquisar por personagem
+ - Favoritar personagens
+ - Alterar idioma da página entre inglês e português
+ - Paginação
+
+### Links 
+
+[Rick and Morty API](https://rickandmortyapi.com/documentation/#introduction)
+[Angular](https://angular.dev/)
+[Rxjs](https://rxjs.dev/)
+
+
